@@ -1,0 +1,15 @@
+# ~/.tmuxinator/default.yml
+
+name: default
+root: ~/
+
+windows:
+  - zsh:
+      panes:
+        - #
+#  - editor:
+#      layout: 1aa8,181x55,0,0{90x55,0,0,0,90x55,91,0[90x27,91,0,1,90x27,91,28,2]}
+#      panes:
+#        - vim
+#        - #
+#        - #
