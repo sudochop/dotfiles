@@ -9,7 +9,4 @@
 	url = https://github.com/scrooloose/syntastic.git
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh
-[submodule "oh-my-zsh"]
-	path = oh-my-zsh
 	url = https://github.com/sudochop/oh-my-zsh.git
