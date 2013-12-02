@@ -1,6 +1,8 @@
 ## Setup
 
 ```bash
+git clone --recursive https://github.com/sudochop/dots.git ~/.dots
+
 ln -s ~/.dots/.oh-my-zsh ~/.oh-my-zsh
 ln -s ~/.dots/.tmux.conf ~/.tmux.conf
 ln -s ~/.dots/.tmuxinator ~/.tmuxinator
