@@ -7,7 +7,7 @@ DISABLE_AUTO_UPDATE=true
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.bin/tmuxinator.zsh
+source ~/.dots/.bin/tmuxinator.zsh
 
 alias sourcezsh="source ~/.zshrc"
 
