@@ -4,8 +4,8 @@ execute pathogen#infect()
 
 syntax on
 filetype plugin indent on
-set t_Co=16
 
+set t_Co=16
 set background=dark
 colorscheme base16-default
 
