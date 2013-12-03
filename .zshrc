@@ -9,6 +9,6 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 source ~/.dots/.bin/tmuxinator.zsh
 
-alias sourcezsh="source ~/.zshrc"
+alias sourcezsh="source ~/.zshrc; source ~/.zprofile"
 
 alias ll="ls -Alh"
