@@ -32,6 +32,9 @@ if maparg('<C-L>', 'n') ==# ''
   nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 endif
 
+"remove trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
+
 set pastetoggle=<F2>
 
 set laststatus=2
@@ -52,4 +55,4 @@ set fileformats+=mac
 set history=1000
 
 let g:airline_powerline_fonts=1
-"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#enabled=1
