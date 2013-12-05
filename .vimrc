@@ -17,6 +17,7 @@ set backspace=indent,eol,start
 set complete-=i
 set showmatch
 set smarttab
+set noswapfile
 
 set nrformats-=octal
 set shiftwidth=4
@@ -31,6 +32,8 @@ set incsearch
 if maparg('<C-L>', 'n') ==# ''
   nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 endif
+
+map <C-n> :NERDTreeToggle<CR>
 
 "remove trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
