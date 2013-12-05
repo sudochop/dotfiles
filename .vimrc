@@ -34,6 +34,7 @@ endif
 
 "remove trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
 
 set pastetoggle=<F2>
 
