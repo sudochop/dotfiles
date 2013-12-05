@@ -16,3 +16,6 @@
 [submodule ".vim/bundle/vim-fugitive"]
 	path = .vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "/Users/miller/.vim/bundle/vim-bufferline"]
+	path = /Users/miller/.vim/bundle/vim-bufferline
+	url = https://github.com/kien/ctrlp.vim.git

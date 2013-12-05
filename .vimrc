@@ -35,9 +35,13 @@ endif
 
 map <C-n> :NERDTreeToggle<CR>
 
+map <C-l> :bnext<CR>
+map <C-h> :bnext<CR>
+
 "remove trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd vimenter * if !argc() | NERDTree | endif
 
 set pastetoggle=<F2>
 
@@ -60,3 +64,6 @@ set history=1000
 
 let g:airline_powerline_fonts=1
 "let g:airline#extensions#tabline#enabled=1
+
+let g:bufferline_echo=0
+let g:bufferline_show_bufnr=0
