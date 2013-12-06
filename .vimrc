@@ -36,7 +36,7 @@ endif
 map <C-n> :NERDTreeToggle<CR>
 
 map <C-l> :bnext<CR>
-map <C-h> :bnext<CR>
+map <C-h> :bprevious<CR>
 
 "remove trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
