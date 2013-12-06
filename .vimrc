@@ -1,5 +1,11 @@
 "miller / .vimrc
 
+"Relies on:
+"pathogen
+"NERDTree
+"vim-airline
+"vim-bufferline
+
 execute pathogen#infect()
 
 syntax on
@@ -28,13 +34,13 @@ set shiftround
 set ttimeout
 set ttimeoutlen=50
 
+"clear search
 set incsearch
 if maparg('<C-L>', 'n') ==# ''
   nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 endif
 
 map <C-n> :NERDTreeToggle<CR>
-
 map <C-l> :bnext<CR>
 map <C-h> :bprevious<CR>
 
@@ -63,7 +69,6 @@ set fileformats+=mac
 set history=1000
 
 let g:airline_powerline_fonts=1
-"let g:airline#extensions#tabline#enabled=1
 
 let g:bufferline_echo=0
 let g:bufferline_show_bufnr=0
