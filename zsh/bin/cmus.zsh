@@ -1,0 +1,2 @@
+
+alias music="cmus-remote"
