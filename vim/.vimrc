@@ -24,6 +24,7 @@ set complete-=i
 set showmatch
 set smarttab
 set noswapfile
+set hidden
 
 set nrformats-=octal
 set shiftwidth=4
