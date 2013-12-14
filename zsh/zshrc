@@ -8,7 +8,12 @@ ZSH_TMUX_AUTOSTART="true"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_CORRECTION="true"
 
-plugins=(z git tmux tmuxinator battery vagrant colored-man zsh-syntax-highlighting)
+plugins=(
+    z git tmux tmuxinator battery vagrant colored-man
+    zsh-completions
+    zsh-history-substring-search
+    zsh-syntax-highlighting
+)
 
 
 source $ZSH/oh-my-zsh.sh
