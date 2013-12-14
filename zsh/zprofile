@@ -11,3 +11,5 @@ cabal=$HOME/.cabal/bin
 export PATH=$rbenv:$cabal:$brew:$bins
 
 export EDITOR='vim'
+
+export HOMEBREW_GITHUB_API_TOKEN=50c2e0549777b237eee466df6cac2e59619d6169
