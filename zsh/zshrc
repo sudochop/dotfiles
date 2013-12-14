@@ -15,13 +15,11 @@ plugins=(
     zsh-syntax-highlighting
 )
 
-
 source $ZSH/oh-my-zsh.sh
+source $HOME/.zprofile
 source $HOME/.dots/zsh/tmuxinator.zsh
 source $HOME/.dots/zsh/cmus.zsh
-source $HOME/.dots/zsh/dynamit.zsh
 
-
-alias sourcezsh="source ~/.zshrc; source ~/.zprofile"
-
+alias zsource="source ~/.zshrc"
 alias ll="ls -Alh"
+alias mv="mv -i"
