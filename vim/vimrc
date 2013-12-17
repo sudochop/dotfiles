@@ -18,6 +18,8 @@ colorscheme base16-default
 set number
 highlight LineNr ctermfg=darkgray
 
+au BufNewFile,BufRead *.cshtml set filetype=html
+
 set autoindent
 set backspace=indent,eol,start
 set complete-=i
