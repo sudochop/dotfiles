@@ -1,6 +1,6 @@
 #miller / .zprofile
 
-bins=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+bins=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/.bin
 
 brew=/usr/local/sbin
 
