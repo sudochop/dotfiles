@@ -23,3 +23,5 @@ source $HOME/.dots/zsh/cmus.zsh
 alias zsource="source ~/.zshrc"
 alias ll="ls -Alh"
 alias mv="mv -i"
+
+alias chrome="open -a \"Google Chrome\""
