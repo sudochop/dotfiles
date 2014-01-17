@@ -7,9 +7,6 @@
 [submodule "vim/vim/bundle/syntastic"]
 	path = vim/vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "vim/vim/bundle/vim-bufferline"]
-	path = vim/vim/bundle/vim-bufferline
-	url = https://github.com/bling/vim-bufferline.git
 [submodule "vim/vim/bundle/vim-fugitive"]
 	path = vim/vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
@@ -19,3 +16,12 @@
 [submodule "vim/vim/bundle/goyo.vim"]
 	path = vim/vim/bundle/goyo.vim
 	url = https://github.com/junegunn/goyo.vim.git
+[submodule "vim/vim/bundle/ctrlp.vim"]
+	path = vim/vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "vim/vim/bundle/vim-multiple-cursors"]
+	path = vim/vim/bundle/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "vim/vim/bundle/vim-haml"]
+	path = vim/vim/bundle/vim-haml
+	url = https://github.com/tpope/vim-haml.git
