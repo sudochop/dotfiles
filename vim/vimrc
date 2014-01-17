@@ -1,22 +1,18 @@
 "miller / .vimrc
 
-"Relies on:
-"pathogen
-"NERDTree
-"vim-airline
-"vim-bufferline
-
 execute pathogen#infect()
 
 syntax on
 filetype plugin indent on
 
 set t_Co=16
-set background=dark
-colorscheme base16-default
+set background=light
+colorscheme writer
 
 set number
-highlight LineNr ctermfg=darkgray
+"highlight LineNr ctermfg=lightgray
+highlight Visual ctermbg=darkgray ctermfg=white
+
 
 au BufNewFile,BufRead *.cshtml set filetype=html
 
@@ -27,6 +23,9 @@ set showmatch
 set smarttab
 set noswapfile
 set hidden
+set laststatus=0
+set mouse=a
+set cursorline
 
 set nrformats-=octal
 set shiftwidth=4
@@ -37,24 +36,9 @@ set shiftround
 set ttimeout
 set ttimeoutlen=50
 
-"clear search
-set incsearch
-if maparg('<C-L>', 'n') ==# ''
-  nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
-endif
-
-map <C-n> :NERDTreeToggle<CR>
-map <C-l> :bnext<CR>
-map <C-h> :bprevious<CR>
-
-"remove trailing whitespace
-autocmd BufWritePre * :%s/\s\+$//e
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
-autocmd vimenter * if !argc() | NERDTree | endif
-
 set pastetoggle=<F2>
 
-set laststatus=2
+set laststatus=0
 set ruler
 set showcmd
 set wildmenu
@@ -63,15 +47,56 @@ set scrolloff=5
 set sidescrolloff=5
 set display+=lastline
 
-if &encoding ==# 'latin1' && has('gui_running')
-  set encoding=utf-8
-endif
-
 set autoread
 set fileformats+=mac
 set history=1000
 
-let g:airline_powerline_fonts=1
+
+" for plugins
+let mapleader = ","
+
+map <Leader>f :Goyo<CR>
+map <Leader>t :NERDTreeToggle<CR>
+
+map <C-l> :bnext<CR>
+map <C-h> :bprevious<CR>
+
+
+"clear search
+set incsearch
+if maparg('<C-L>', 'n') ==# ''
+  nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
+endif
+
+
+"remove trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd vimenter * if !argc() | NERDTree | endif
+
+" Change cursor in Insert mode
+let &t_EI .= "\<Esc>[2 q"
+let &t_SI .= "\<Esc>[6 q"
 
 let g:bufferline_echo=0
 let g:bufferline_show_bufnr=0
+
+
+"" Goyo DFM
+
+function! g:goyo_before()
+  silent !tmux set status off
+  set noshowmode
+  set noshowcmd
+endfunction
+
+if !exists("*g:goyo_after")
+  function! g:goyo_after()
+    silent !tmux set status on
+    set showmode
+    set showcmd
+    :so ~/.vimrc
+  endfunction
+endif
+
+let g:goyo_callbacks = [function('g:goyo_before'), function('g:goyo_after')]
